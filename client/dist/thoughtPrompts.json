@@ -1,0 +1,11 @@
+{
+  "easyThoughtPrompts": [
+    "What did you do today?", "Do you have any pets? If so, tell me about them. If not, would you like to have some?", "What is you favorite type of weather for you day off?", "What do you do to relax?", "Tell me about some of your hobbies.", "What is you second favorite color?", "If you could take a vacation to anyplace in the world free of charge, where would you go?", "What's your favorite breakfast food?"
+  ],
+  "hardThoughtPrompts": [
+    "How are you feeling today?", "Tell me three things you like most about yourself", "If you could do anything right now, what would it be?", "If you could talk to someone right now and be completely open with them- inflicting no reprecussions- who would you speak to?", "If your brain were a tangible, physical place, what would it be like?", "What are the qualities needed for a good friendship?", "Tell me about your proudest moment", "What makes you happy in a relationship?"
+  ],
+  "writingPrompts": [
+    "A shoe falls out of the sky. Justify why.", "How does choosing whether to use a blue towel or a red towel to dry his hands that morning affect the rest of his day?", " A man is stranded on a deserted island. The only other living creature on the island is an old, cranky goose with a broken wing.", "Your character lives in a tower that goes infinitely up and infinitely down. What is his/her life like? Is this tower a prison, or is it wonderful?"
+  ]
+}

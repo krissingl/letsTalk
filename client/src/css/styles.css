@@ -6,16 +6,22 @@ body {
   flex-direction: row;
   justify-content: space-between;
   background-color: white;
+  padding: none;
+  justify-self: stretch;
+  min-height: 40px;
 }
 .navBar {
   display: flex;
   flex-direction: row;
   justify-content: right;
+  padding-right: 25px;
 }
 .menuBtn {
   background-color: white;
   outline: none;
   border: none;
+  font-size: 15px;
+  width: 130px;
 }
 .menuBtn:hover {
   background-color: olivedrab;
@@ -24,8 +30,27 @@ body {
 .homeTitle {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   padding: 100px 100px 100px 100px;
+}
+.listenBtnsBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.listenBtns {
+  border: none;
+  outline: none;
+  background-color: olivedrab;
+  color: white;
+  width: 80px;
+  height: 40px;
+}
+.listenBtns:hover {
+  border: none;
+  outline: none;
+  background-color: rgb(187, 214, 133);
+  color: rgb(0, 0, 0);
 }
 .wordsBox {
   display: flex;
@@ -33,9 +58,9 @@ body {
   padding: 30px 30px 30px 30px;
 }
 .words {
-  width: 500px;
+  width: 1000px;
   margin: 50px auto;
-  background-color: pink;
+  background-color: white;
   border-radius: 5px;
   box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
   padding: 1rem 2rem 1rem 5rem;
@@ -57,18 +82,33 @@ p {
   border: 1px solid;
   border-color: transparent #efe4e4;
 }
-.resetAndSaveBox {
+.speechControlBox {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.resetBtn {
-  background-color: white;
-  width: 100px;
+.resetAndSaveBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
 }
-.saveBtn {
+.listeningSpan {
+  font-size: 30px;
   background-color: white;
+  padding: 5px 15px 5px 15px;
+}
+.resetAndSaveBtn {
+  border: none;
+  outline: none;
+  background-color: olivedrab;
+  color: white;
   width: 200px;
+}
+.resetAndSaveBtn:hover {
+  border: none;
+  outline: none;
+  background-color: rgb(187, 214, 133);
+  color: rgb(0, 0, 0);
 }
 .goalInput {
   width: 200px;

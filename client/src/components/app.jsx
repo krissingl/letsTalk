@@ -14,12 +14,13 @@ class App extends React.Component {
       goal: 100,
       page: 'home',
       thoughts: '',
+      prompts: '',
     };
     this.handleGoalChange = this.handleGoalChange.bind(this);
     this.handleCountChange = this.handleCountChange.bind(this);
     this.handleThotChange = this.handleThotChange.bind(this);
+    this.handlePromptsChange = this.handlePromptsChange.bind(this);
     this.checkGoal = this.checkGoal.bind(this);
-    this.getPrize = this.getPrize.bind(this);
     this.resetState = this.resetState.bind(this);
     this.changePage = this.changePage.bind(this);
   }
@@ -55,6 +56,11 @@ class App extends React.Component {
     console.log(this.state.thoughts);
   }
 
+  handlePromptsChange(prompts) {
+    this.setState({ prompts });
+    console.log(this.state.prompts);
+  }
+
   checkGoal() {
     if (this.state.count >= this.state.goal) {
       alert('You\'ve reached your goal!');
@@ -63,16 +69,6 @@ class App extends React.Component {
       const newGoal = this.state.goal * 100;
       this.setState({ goal: newGoal });
     }
-  }
-
-  getPrize() {
-    axios.get('/prizes', (err, result) => {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log(result);
-      }
-    });
   }
 
   resetState() {
@@ -107,21 +103,23 @@ class App extends React.Component {
     } else if (this.state.page === 'spillTea') {
       page = (
         <SpillTea
+          handlePromptsChange={this.handlePromptsChange}
           handleCountChange={this.handleCountChange}
           handleGoalChange={this.handleGoalChange}
           resetState={this.resetState}
+          prompts={this.state.prompts}
         />
       );
     }
     return (
       <div>
         <div className={classes.navBarBox}>
-          <h2>Let's Talk</h2>
+          <img src="https://lets-talk-environment.s3-us-west-1.amazonaws.com/logos/logo.png" alt="letsTalkLogo" width="140" height="140" />
           <div className={classes.navBar}>
             <button className={classes.menuBtn} onClick={() => { this.changePage('home'); }} type="button">Home</button>
             <button className={classes.menuBtn} onClick={() => { this.changePage('hangout'); }} type="button">Hangout</button>
             <button className={classes.menuBtn} onClick={() => { this.changePage('thoughts'); }} type="button">See Thoughts</button>
-            <button className={classes.menuBtn} onClick={() => { this.changePage('spillTea'); }} type="button">Spill Tea</button>
+            <button className={classes.menuBtn} onClick={() => { this.changePage('spillTea'); }} type="button">Spill Some Tea</button>
           </div>
         </div>
         <div>

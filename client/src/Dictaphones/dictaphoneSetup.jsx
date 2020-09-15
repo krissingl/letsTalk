@@ -38,15 +38,16 @@ const Dictaphone = ({ commands, onCountChange, resetState }) => {
 
   return (
     <div>
-      <div className={classes.resetAndSaveBox}>
-        <span>
+      <div className={classes.speechControlBox}>
+        <span className={classes.listeningSpan}>
           listening:
           {' '}
           {listening ? 'on' : 'off'}
         </span>
-        <button type="button" className={classes.resetBtn} onClick={() => { resetTranscript(); resetState(); }}>Reset</button>
-        <button type="button" className={classes.saveBtn} onClick={() => { saveThoughts(finalTranscript); }}>Save Thoughts</button>
-        {/* onClick=need function that saves finalTranscript to db */}
+        <div className={classes.resetAndSaveBox}>
+          <button type="button" className={classes.resetAndSaveBtn} onClick={() => { resetTranscript(); resetState(); }}>Reset</button>
+          <button type="button" className={classes.resetAndSaveBtn} onClick={() => { saveThoughts(finalTranscript); }}>Save Thoughts</button>
+        </div>
       </div>
       <div className={classes.wordsBox}>
         <span className={classes.words}>{transcript}</span>

@@ -1,0 +1,92 @@
+body {
+  background-color: rgba(191, 250, 191, 0.685);
+}
+.navBarBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+}
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+.menuBtn {
+  background-color: white;
+  outline: none;
+  border: none;
+}
+.menuBtn:hover {
+  background-color: olivedrab;
+  color: white;
+}
+.homeTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 100px 100px 100px 100px;
+}
+.wordsBox {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px 30px 30px;
+}
+.words {
+  width: 500px;
+  margin: 50px auto;
+  background-color: pink;
+  border-radius: 5px;
+  box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+  padding: 1rem 2rem 1rem 5rem;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px;
+  background-size: 100% 3rem;
+  position: relative;
+  line-height: 3rem;
+}
+p {
+  margin: 0 0 3rem;
+}
+.words:before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  top: 0;
+  left: 30px;
+  bottom: 0;
+  border: 1px solid;
+  border-color: transparent #efe4e4;
+}
+.resetAndSaveBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.resetBtn {
+  background-color: white;
+  width: 100px;
+}
+.saveBtn {
+  background-color: white;
+  width: 200px;
+}
+.goalInput {
+  width: 200px;
+}
+.thoughtListBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.thoughtList {
+  background-color: white;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.timeBtn {
+  border: none;
+  outline: none;
+  background-color: white;
+}

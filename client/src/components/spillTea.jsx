@@ -29,17 +29,21 @@ const SpillTea = ({
   return (
     <div>
       <h2>Spill Some Tea and I'll listen</h2>
-      <h4>You can set a word count goal here:</h4>
-      <input
-        className={classes.goalInput}
-        placeholder="Place goal here! Default is 100"
-        onChange={handleGoalChange}
-      />
       <div>
-        <h4>Don't Know What to Talk About? Get a prompt here!</h4>
-        <button type="button" className={classes.promptPleaseBtn} onClick={() => { const thoughtPrompt = getThoughtPrompt(); handlePromptsChange(thoughtPrompt); }}>Prompt Please!</button>
         <div>
-          {prompts}
+          <div className={classes.promptBox}>
+            <h4>Don't Know What to Talk About? Get a prompt here!</h4>
+            <button type="button" className={classes.promptBtn} onClick={() => { const thoughtPrompt = getThoughtPrompt(); handlePromptsChange(thoughtPrompt); }}>Prompt Please!</button>
+            <div>
+              {prompts}
+            </div>
+            <h4>You can set a word count goal here:</h4>
+            <input
+              className={classes.goalInput}
+              placeholder="Place goal here! Default is 100"
+              onChange={handleGoalChange}
+            />
+          </div>
         </div>
       </div>
       <DictaphoneWidget onCountChange={handleCountChange} resetState={resetState} />

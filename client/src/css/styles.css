@@ -1,5 +1,12 @@
 body {
   background-color: rgba(191, 250, 191, 0.685);
+  font-family: Verdana, Tahoma, sans-serif;
+  color: rgb(58, 57, 57);
+}
+button {
+  background-color: white;
+  outline: none;
+  border: none;
 }
 .navBarBox {
   display: flex;
@@ -17,9 +24,6 @@ body {
   padding-right: 25px;
 }
 .menuBtn {
-  background-color: white;
-  outline: none;
-  border: none;
   font-size: 15px;
   width: 130px;
 }
@@ -28,10 +32,26 @@ body {
   color: white;
 }
 .homeTitle {
+  margin: auto;
+  width: 50%;
+  padding: 20px 100px 100px 100px;
+}
+.optionsBox {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 100px 100px 100px 100px;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.promptBox {
+  background-color: white;
+  padding: 10px 10px 10px 10px;
+  width: 1000px;
+}
+.promptBtn {
+  background-color: olivedrab;
+  color: white;
+  width: 150px;
+  height: 40px;
+  padding: 10px 10px 10px 10px;
 }
 .listenBtnsBox {
   display: flex;
@@ -39,16 +59,12 @@ body {
   justify-content: center;
 }
 .listenBtns {
-  border: none;
-  outline: none;
   background-color: olivedrab;
   color: white;
   width: 80px;
   height: 40px;
 }
 .listenBtns:hover {
-  border: none;
-  outline: none;
   background-color: rgb(187, 214, 133);
   color: rgb(0, 0, 0);
 }
@@ -93,20 +109,16 @@ p {
   justify-content: right;
 }
 .listeningSpan {
-  font-size: 30px;
+  font-size: 20px;
   background-color: white;
   padding: 5px 15px 5px 15px;
 }
 .resetAndSaveBtn {
-  border: none;
-  outline: none;
   background-color: olivedrab;
   color: white;
   width: 200px;
 }
 .resetAndSaveBtn:hover {
-  border: none;
-  outline: none;
   background-color: rgb(187, 214, 133);
   color: rgb(0, 0, 0);
 }

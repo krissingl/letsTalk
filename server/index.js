@@ -2,7 +2,6 @@
 const express = require('express');
 const bodyparser = require('body-parser');
 const cors = require('cors');
-const expressStaticGzip = require('express-static-gzip');
 
 const db = require('nano')('http://admin:Lady231!@localhost:5984/lets_talk_thoughts');
 
@@ -12,14 +11,6 @@ const port = 3012;
 app.use(cors());
 app.use(bodyparser.json());
 app.use(express.static(`${__dirname}/../client/dist`));
-
-app.use('bundle.js', expressStaticGzip(`${__dirname}../client/dist`, {
-  enableBrotli: true,
-  orderPreference: ['br', 'gz'],
-  setHeaders: (res) => {
-    res.setHeader('Cache-Control', 'public, max-age=31536000');
-  },
-}));
 
 app.get('/thoughts', (req, res) => {
   const thots = [];

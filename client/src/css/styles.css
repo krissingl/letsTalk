@@ -8,6 +8,13 @@ button {
   outline: none;
   border: none;
 }
+.homePage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-right: 200px;
+  margin-left: 50px;
+}
 .navBarBox {
   display: flex;
   flex-direction: row;

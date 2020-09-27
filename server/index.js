@@ -28,7 +28,10 @@ app.get('/thoughts', (req, res) => {
 });
 app.post('/thoughts', (req, res) => {
   const { thought } = req.body;
-  db.insert({ _id: new Date(), thought }).then((body) => {
+  const { timestamp } = req.body;
+  // const timestamp = new Date();
+  // console.log(timestamp);
+  db.insert({ _id: timestamp, thought }).then((body) => {
     console.log(body);
     res.status(200);
   });

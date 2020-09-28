@@ -27,14 +27,15 @@ const Dictaphone = ({ commands, onCountChange, resetState }) => {
 
   const saveThoughts = (thoughts) => {
     console.log('Did saveThoughts fire? Did it shoot thot: ', thoughts);
-    const timestamps = new Date();
-    console.log(timestamps);
+    let currentDate = new Date();
+    currentDate = JSON.stringify(currentDate);
+    console.log(currentDate);
     axios({
       method: 'post',
       url: '/thoughts',
       data: {
         thought: thoughts,
-        timestamp: timestamps,
+        timestamp: currentDate,
       },
     });
   };

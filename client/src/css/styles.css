@@ -8,6 +8,9 @@ button {
   outline: none;
   border: none;
 }
+.titleBuffer {
+  padding: 200px 0px 50px 0px;
+}
 .homePage {
   display: flex;
   flex-direction: row;
@@ -16,13 +19,13 @@ button {
   margin-left: 50px;
 }
 .navBarBox {
+  position:absolute;
+  left:0;
+  right:0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: white;
-  padding: none;
-  justify-self: stretch;
-  min-height: 40px;
 }
 .navBar {
   display: flex;
@@ -43,15 +46,11 @@ button {
   width: 50%;
   padding: 20px 100px 100px 100px;
 }
-.optionsBox {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
 .promptBox {
+  position:absolute;
+  left:5px;
+  right:5px;
   background-color: white;
-  padding: 10px 10px 10px 10px;
-  width: 1000px;
 }
 .promptBtn {
   background-color: olivedrab;
@@ -105,6 +104,7 @@ p {
   border-color: transparent #efe4e4;
 }
 .speechControlBox {
+  padding-top: 200px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

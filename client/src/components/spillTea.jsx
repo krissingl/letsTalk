@@ -28,7 +28,7 @@ const SpillTea = ({
   };
   return (
     <div>
-      <h2>Spill Some Tea and I'll listen</h2>
+      <h2 className={classes.titleBuffer}>Spill Some Tea and I'll listen</h2>
       <div>
         <div>
           <div className={classes.promptBox}>
@@ -46,7 +46,9 @@ const SpillTea = ({
           </div>
         </div>
       </div>
-      <DictaphoneWidget onCountChange={handleCountChange} resetState={resetState} />
+      <div>
+        <DictaphoneWidget onCountChange={handleCountChange} resetState={resetState} />
+      </div>
       <div className={classes.listenBtnsBox}>
         <button type="button" className={classes.listenBtns} onClick={listenContinuously}>Listen</button>
         <button type="button" className={classes.listenBtns} onClick={SpeechRecognition.stopListening}>Stop</button>

@@ -1,9 +1,8 @@
 import React from 'react';
 import SpeechRecognition from 'react-speech-recognition';
-// import axios from 'axios';
 import DictaphoneWidget from '../Dictaphones/dictaphone.jsx';
+import ExtrasBox from './ExtrasBox.jsx';
 import classes from '../css/styles.css';
-import thoughtPrompts from '../../dist/thoughtPrompts.json';
 
 const SpillTea = ({
   handlePromptsChange,
@@ -21,30 +20,15 @@ const SpillTea = ({
       language: 'en-GB',
     });
   };
-  const getThoughtPrompt = () => {
-    const { length } = thoughtPrompts.easyThoughtPrompts;
-    const randomIndex = Math.floor(Math.random() * length);
-    return thoughtPrompts.easyThoughtPrompts[randomIndex];
-  };
   return (
     <div>
       <h2 className={classes.titleBuffer}>Spill Some Tea and I'll listen</h2>
       <div>
-        <div>
-          <div className={classes.promptBox}>
-            <h4>Don't Know What to Talk About? Get a prompt here!</h4>
-            <button type="button" className={classes.promptBtn} onClick={() => { const thoughtPrompt = getThoughtPrompt(); handlePromptsChange(thoughtPrompt); }}>Prompt Please!</button>
-            <div>
-              {prompts}
-            </div>
-            <h4>You can set a word count goal here:</h4>
-            <input
-              className={classes.goalInput}
-              placeholder="Place goal here! Default is 100"
-              onChange={handleGoalChange}
-            />
-          </div>
-        </div>
+        <ExtrasBox
+          prompts={prompts}
+          handlePromptsChange={handlePromptsChange}
+          handleGoalChange={handleGoalChange}
+        />
       </div>
       <div>
         <DictaphoneWidget onCountChange={handleCountChange} resetState={resetState} />

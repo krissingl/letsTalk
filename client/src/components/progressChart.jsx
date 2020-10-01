@@ -28,10 +28,10 @@ const ProgressChart = ({ wordCount, goal }) => {
         // pathTransition: 'none',
 
         // Colors
-        pathColor: `rgba(62, 152, 199, ${progress / goal})`,
+        pathColor: `rgba(62, 152, 199, ${progress})`,
         textColor: '#f88',
         trailColor: '#d6d6d6',
-        backgroundColor: '#3e98c7',
+        backgroundColor: 'red',
       })}
     />
   );

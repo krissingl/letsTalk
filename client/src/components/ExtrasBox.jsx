@@ -3,7 +3,13 @@ import ProgressChart from './progressChart.jsx';
 import classes from '../css/styles.css';
 import thoughtPrompts from '../../dist/thoughtPrompts.json';
 
-const ExtrasBox = ({ handleGoalChange, handlePromptsChange, prompts }) => {
+const ExtrasBox = ({
+  handleGoalChange,
+  handlePromptsChange,
+  prompts,
+  wordCount,
+  goal,
+}) => {
   const getThoughtPrompt = () => {
     const { length } = thoughtPrompts.easyThoughtPrompts;
     const randomIndex = Math.floor(Math.random() * length);
@@ -28,7 +34,7 @@ const ExtrasBox = ({ handleGoalChange, handlePromptsChange, prompts }) => {
           />
         </div>
         <div className={classes.progressChart}>
-          <ProgressChart />
+          <ProgressChart wordCount={wordCount} goal={goal} />
         </div>
       </div>
     </div>

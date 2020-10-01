@@ -1,15 +1,16 @@
 import React from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import classes from '../css/styles.css';
+// import classes from '../css/styles.css';
 
-const ProgressChart = () => {
-  // Use D3 to create a progress tracker on word goal here
-  const value = 0.66;
+const ProgressChart = ({ wordCount, goal }) => {
+  const progress = wordCount / goal;
+  console.log(progress);
+  console.log(goal);
   return (
     <CircularProgressbar
-      value={value}
+      value={progress}
       maxValue={1}
-      text={`${value * 100}%`}
+      text={`${progress * goal}%`}
       styles={buildStyles({
         // Rotation of path and trail, in number of turns (0-1)
         rotation: 0.25,
@@ -27,7 +28,7 @@ const ProgressChart = () => {
         // pathTransition: 'none',
 
         // Colors
-        pathColor: `rgba(62, 152, 199, ${value / 100})`,
+        pathColor: `rgba(62, 152, 199, ${progress / goal})`,
         textColor: '#f88',
         trailColor: '#d6d6d6',
         backgroundColor: '#3e98c7',

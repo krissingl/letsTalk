@@ -10,6 +10,8 @@ const SpillTea = ({
   handleGoalChange,
   resetState,
   prompts,
+  count,
+  goal,
 }) => {
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
     console.log('Your browser does not support speech recognition software! Try Chrome desktop, maybe?');
@@ -26,6 +28,8 @@ const SpillTea = ({
       <div>
         <ExtrasBox
           prompts={prompts}
+          wordCount={count}
+          goal={goal}
           handlePromptsChange={handlePromptsChange}
           handleGoalChange={handleGoalChange}
         />

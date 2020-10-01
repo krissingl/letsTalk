@@ -45,7 +45,6 @@ class App extends React.Component {
   }
 
   handleCountChange(newCount) {
-    console.log(this.state.count);
     // function that illustrates progress
     this.setState({ count: newCount });
     this.checkGoal();
@@ -53,12 +52,10 @@ class App extends React.Component {
 
   handleThotChange(thoughts) {
     this.setState({ thoughts });
-    console.log(this.state.thoughts);
   }
 
   handlePromptsChange(prompts) {
     this.setState({ prompts });
-    console.log(this.state.prompts);
   }
 
   checkGoal() {
@@ -82,9 +79,6 @@ class App extends React.Component {
 
   render() {
     let page;
-    // const currentPage = this.state.page;
-    // console.log(currentPage);
-    // console.log(this.state.count);
     if (this.state.page === 'home') {
       page = (
         <HomePage />
@@ -108,6 +102,8 @@ class App extends React.Component {
           handleGoalChange={this.handleGoalChange}
           resetState={this.resetState}
           prompts={this.state.prompts}
+          count={this.state.count}
+          goal={this.state.goal}
         />
       );
     }

@@ -54,15 +54,14 @@ button {
   padding: 20px 100px 100px 100px;
 }
 .optionBox {
-  background-color: coral;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  background-color: white;
 }
 .promptBox {
   width: 500px;
   height: 200px;
-  background-color: cadetblue;
   position: relative;
 }
 .promptBtn {
@@ -72,17 +71,16 @@ button {
   height: 40px;
 }
 .wordCountBox {
-  background-color: violet;
   width: 700px;
   height: 200px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .progressChart {
-  max-width: 100px;
-  max-height: 100px;
-  background-color: yellow;
-  align-self: flex-end;
+  display: block;
+  width: 200px;
+  height: 200px;
 }
 .listenBtnsBox {
   display: flex;

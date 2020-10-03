@@ -4,21 +4,24 @@ import thoughtPrompts from '../../dist/thoughtPrompts.json';
 
 const PromptBox = ({ prompts, handlePromptsChange }) => {
   console.log(thoughtPrompts.promptTypes);
+  let pType;
   const promptTypesList = thoughtPrompts.promptTypes.map((promptType) => (
-    <option>{promptType.type}</option>
+    <option value={promptType.prompts}>{promptType.type}</option>
   ));
-  const getThoughtPrompt = () => {
-    const { length } = thoughtPrompts.easyThoughtPrompts;
+  const getThoughtPrompt = ({ promptsArray }) => {
+    const { length } = promptsArray;
     const randomIndex = Math.floor(Math.random() * length);
-    // need to create a thought prompt selector to select type of prompt
-    return thoughtPrompts.easyThoughtPrompts[randomIndex];
+    return promptsArray[randomIndex];
+  };
+  const findType = (e) => {
+    console.log(e.target.value);
   };
   return (
     <div className={classes.promptBox}>
       <h5>Don't Know What to Talk About? Get a prompt here!</h5>
       <div>
         <span>Select Prompt Type:</span>
-        <select>
+        <select onChange={findType}>
           {promptTypesList}
         </select>
       </div>

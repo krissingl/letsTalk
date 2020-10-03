@@ -4,13 +4,14 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 
 const ProgressChart = ({ wordCount, goal }) => {
   const progress = wordCount / goal;
-  console.log(progress);
+  const percentage = progress * 100;
+  console.log(percentage);
   console.log(goal);
   return (
     <CircularProgressbar
       value={progress}
       maxValue={1}
-      text={`${progress * goal}%`}
+      text={`${percentage.toFixed(1)}%`}
       styles={buildStyles({
         // Rotation of path and trail, in number of turns (0-1)
         rotation: 0.25,
@@ -25,10 +26,10 @@ const ProgressChart = ({ wordCount, goal }) => {
         pathTransitionDuration: 0.5,
 
         // Can specify path transition in more detail, or remove it entirely
-        // pathTransition: 'none',
+        // pathTransition: '',
 
         // Colors
-        pathColor: `rgba(62, 152, 199, ${progress})`,
+        pathColor: `olivedrab`,
         textColor: '#f88',
         trailColor: '#d6d6d6',
         backgroundColor: 'red',

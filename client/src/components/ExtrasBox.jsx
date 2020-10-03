@@ -19,7 +19,10 @@ const ExtrasBox = ({
     <div className={classes.optionBox}>
       <div className={classes.promptBox}>
         <h5>Don't Know What to Talk About? Get a prompt here!</h5>
-        <button type="button" className={classes.promptBtn} onClick={() => { const thoughtPrompt = getThoughtPrompt(); handlePromptsChange(thoughtPrompt); }}>Prompt Please!</button>
+        <form>
+          <input type="select"></input>
+          <button type="button" className={classes.promptBtn} onClick={() => { const thoughtPrompt = getThoughtPrompt(); handlePromptsChange(thoughtPrompt); }}>Prompt Please!</button>
+        </form>
         <div>
           {prompts}
         </div>

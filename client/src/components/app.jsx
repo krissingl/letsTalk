@@ -115,7 +115,7 @@ class App extends React.Component {
             <button className={classes.menuBtn} onClick={() => { this.changePage('home'); }} type="button">Home</button>
             <button className={classes.menuBtn} onClick={() => { this.changePage('hangout'); }} type="button">Hangout</button>
             <button className={classes.menuBtn} onClick={() => { this.changePage('thoughts'); }} type="button">See Thoughts</button>
-            <button className={classes.menuBtn} onClick={() => { this.changePage('spillTea'); }} type="button">Spill Some Tea</button>
+            <button className={classes.menuBtn} onClick={() => { this.changePage('spillTea'); }} type="button">Let's Have Tea</button>
           </div>
         </div>
         <div>

@@ -24,7 +24,7 @@ const SpillTea = ({
   };
   return (
     <div>
-      <h2 className={classes.titleBuffer}>Spill Some Tea and I'll listen</h2>
+      <h2 className={classes.titleBuffer}>Have Some Tea and Let's Talk</h2>
       <div>
         <ExtrasBox
           prompts={prompts}

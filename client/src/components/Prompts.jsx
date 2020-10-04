@@ -5,6 +5,7 @@ import thoughtPrompts from '../../dist/thoughtPrompts.json';
 const PromptBox = ({ prompts, handlePromptsChange }) => {
   console.log(thoughtPrompts.promptTypes);
   let pType;
+  // Need to get the values in array form
   const promptTypesList = thoughtPrompts.promptTypes.map((promptType) => (
     <option value={promptType.prompts}>{promptType.type}</option>
   ));

@@ -3,11 +3,10 @@ import classes from '../css/styles.css';
 import thoughtPrompts from '../../dist/thoughtPrompts.json';
 
 const PromptBox = ({ prompts, handlePromptsChange }) => {
-  let pArray;
-
-  const promptTypesList = thoughtPrompts.promptTypes.map((promptType) => (
-    <option key={promptType.key} value={promptType.key}>{promptType.type}</option>
+  const promptTypesList = Object.keys(thoughtPrompts).map((promptType) => (
+    <option key={promptType} value={promptType}>{thoughtPrompts[promptType].type}</option>
   ));
+  console.log(Object.keys(thoughtPrompts));
   const getThoughtPrompt = (promptsArray) => {
     console.log(promptsArray);
     const { length } = promptsArray;
@@ -15,12 +14,8 @@ const PromptBox = ({ prompts, handlePromptsChange }) => {
     return promptsArray[randomIndex];
   };
   const findTypePrompts = (e) => {
-    const type = e.target.value;
-    for (let i = 0; i < thoughtPrompts.promptTypes.length; i++) {
-      if (thoughtPrompts.promptTypes[i][type]) {
-        pArray = thoughtPrompts.promptTypes[i][type];
-      }
-    }
+    const promptObj = thoughtPrompts[e.target.value];
+    console.log(promptObj);
   };
   return (
     <div className={classes.promptBox}>

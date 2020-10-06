@@ -2,20 +2,25 @@ import React from 'react';
 import classes from '../css/styles.css';
 import thoughtPrompts from '../../dist/thoughtPrompts.json';
 
-const PromptBox = ({ prompts, handlePromptsChange }) => {
+const PromptBox = ({
+  prompts,
+  pType,
+  handlePromptsChange,
+  handlePTypeChange,
+}) => {
   const promptTypesList = Object.keys(thoughtPrompts).map((promptType) => (
     <option key={promptType} value={promptType}>{thoughtPrompts[promptType].type}</option>
   ));
-  console.log(Object.keys(thoughtPrompts));
-  const getThoughtPrompt = (promptsArray) => {
-    console.log(promptsArray);
-    const { length } = promptsArray;
+
+  const getThoughtPrompt = () => {
+    const promptObj = thoughtPrompts[pType];
+    const promptArr = promptObj.prompts;
+    const { length } = promptArr;
     const randomIndex = Math.floor(Math.random() * length);
-    return promptsArray[randomIndex];
+    return promptArr[randomIndex];
   };
   const findTypePrompts = (e) => {
-    const promptObj = thoughtPrompts[e.target.value];
-    console.log(promptObj);
+    handlePTypeChange(e.target.value);
   };
   return (
     <div className={classes.promptBox}>
@@ -26,7 +31,7 @@ const PromptBox = ({ prompts, handlePromptsChange }) => {
           {promptTypesList}
         </select>
       </div>
-      <button type="button" className={classes.promptBtn} onClick={() => { const thoughtPrompt = getThoughtPrompt(pArray); handlePromptsChange(thoughtPrompt); }}>Prompt Please!</button>
+      <button type="button" className={classes.promptBtn} onClick={() => { const thoughtPrompt = getThoughtPrompt(); handlePromptsChange(thoughtPrompt); }}>Prompt Please!</button>
       <div>
         {prompts}
       </div>

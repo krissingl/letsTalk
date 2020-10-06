@@ -6,12 +6,19 @@ import classes from '../css/styles.css';
 const ExtrasBox = ({
   handleGoalChange,
   handlePromptsChange,
+  handlePTypeChange,
   prompts,
+  pType,
   wordCount,
   goal,
 }) => (
   <div className={classes.optionBox}>
-    <PromptBox prompts={prompts} handlePromptsChange={handlePromptsChange} />
+    <PromptBox
+      prompts={prompts}
+      pType={pType}
+      handlePromptsChange={handlePromptsChange}
+      handlePTypeChange={handlePTypeChange}
+    />
     <div className={classes.wordCountBox}>
       <div>
         <h5>You can set a word count goal here:</h5>

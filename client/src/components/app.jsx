@@ -15,10 +15,12 @@ class App extends React.Component {
       page: 'home',
       thoughts: '',
       prompts: '',
+      pType: '',
     };
     this.handleGoalChange = this.handleGoalChange.bind(this);
     this.handleCountChange = this.handleCountChange.bind(this);
     this.handleThotChange = this.handleThotChange.bind(this);
+    this.handlePTypeChange = this.handlePTypeChange.bind(this);
     this.handlePromptsChange = this.handlePromptsChange.bind(this);
     this.checkGoal = this.checkGoal.bind(this);
     this.resetState = this.resetState.bind(this);
@@ -45,7 +47,6 @@ class App extends React.Component {
   }
 
   handleCountChange(newCount) {
-    // function that illustrates progress
     this.setState({ count: newCount });
     this.checkGoal();
   }
@@ -56,6 +57,10 @@ class App extends React.Component {
 
   handlePromptsChange(prompts) {
     this.setState({ prompts });
+  }
+
+  handlePTypeChange(pType) {
+    this.setState({ pType });
   }
 
   checkGoal() {
@@ -99,9 +104,11 @@ class App extends React.Component {
         <SpillTea
           handlePromptsChange={this.handlePromptsChange}
           handleCountChange={this.handleCountChange}
+          handlePTypeChange={this.handlePTypeChange}
           handleGoalChange={this.handleGoalChange}
           resetState={this.resetState}
           prompts={this.state.prompts}
+          pType={this.state.pType}
           count={this.state.count}
           goal={this.state.goal}
         />

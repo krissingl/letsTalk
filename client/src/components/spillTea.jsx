@@ -7,9 +7,11 @@ import classes from '../css/styles.css';
 const SpillTea = ({
   handlePromptsChange,
   handleCountChange,
+  handlePTypeChange,
   handleGoalChange,
   resetState,
   prompts,
+  pType,
   count,
   goal,
 }) => {
@@ -30,7 +32,9 @@ const SpillTea = ({
           prompts={prompts}
           wordCount={count}
           goal={goal}
+          pType={pType}
           handlePromptsChange={handlePromptsChange}
+          handlePTypeChange={handlePTypeChange}
           handleGoalChange={handleGoalChange}
         />
       </div>

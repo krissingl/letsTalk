@@ -1,4 +1,5 @@
 {
+  "None": {"prompts":[], "type": "None"},
   "easyGoing":  {"prompts": [
       "What did you do today?", "Do you have any pets? If so, tell me about them. If not, would you like to have some?", "What is you favorite type of weather for you day off?", "What do you do to relax?", "Tell me about some of your hobbies.", "What is you second favorite color?", "If you could take a vacation to anyplace in the world free of charge, where would you go?", "What's your favorite breakfast food?"
       ],

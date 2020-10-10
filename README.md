@@ -1,11 +1,6 @@
 # Let's Talk
-![Image of LetsTalk Logo]
-(./extras/logo.png)
 
 Self-help app that encourages users to practice speaking. For those with social anxiety or trouble speaking in public. Currently a work-in-progress and not ready for commercial use.
-
-![Image of listening page]
-(./extras/example.png)
 
 ## Installation
 

@@ -13,6 +13,9 @@ const PromptBox = ({
   ));
 
   const getThoughtPrompt = () => {
+    if (!pType) {
+      return (<div className={classes.errorMsg}>Please Select Type!</div>);
+    }
     const promptObj = thoughtPrompts[pType];
     const promptArr = promptObj.prompts;
     const { length } = promptArr;

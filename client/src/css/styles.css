@@ -70,6 +70,9 @@ button {
   width: 150px;
   height: 40px;
 }
+.errorMsg {
+  color: red;
+}
 .wordCountBox {
   width: 700px;
   height: 200px;

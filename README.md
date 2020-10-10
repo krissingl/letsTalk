@@ -1,11 +1,11 @@
 # Let's Talk
 ![Image of LetsTalk Logo]
-(https://github.com/krissingl/letsTalk/blob/master/extras/logo.png)
+(./extras/logo.png)
 
 Self-help app that encourages users to practice speaking. For those with social anxiety or trouble speaking in public. Currently a work-in-progress and not ready for commercial use.
 
 ![Image of listening page]
-(https://github.com/krissingl/letsTalk/blob/master/extras/example.png)
+(./extras/example.png)
 
 ## Installation
 

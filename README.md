@@ -1,5 +1,3 @@
-# Let's Talk
-
 ![](logo.png)
 
 ## Summary

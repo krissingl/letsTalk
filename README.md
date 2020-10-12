@@ -1,10 +1,15 @@
 # Let's Talk
 
+![](logo.png)
+
+## Summary
+
 > Self-help app that encourages users to practice speaking. For those with social anxiety or trouble speaking in public. Currently a work-in-progress and not ready for commercial use.
 
-## Installation
-
+## Example Image
 ![](example.jpg)
+
+## Installation
 
 ### Step 1: GET THE REPO
   Fork this repo and clone it down to your local machine.

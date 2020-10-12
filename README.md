@@ -2,9 +2,9 @@
 
 > Self-help app that encourages users to practice speaking. For those with social anxiety or trouble speaking in public. Currently a work-in-progress and not ready for commercial use.
 
-![](example.png)
-
 ## Installation
+
+![](example.jpg)
 
 ### Step 1: GET THE REPO
   Fork this repo and clone it down to your local machine.
@@ -20,11 +20,11 @@
   module.exports.db = db;
   ```
 
-  * So long as you follow these directions the .gitignore file should automatically hide your credentials, but be sure before pushing!
+  > So long as you follow these directions the .gitignore file should automatically hide your credentials, but be sure before pushing!
 ### Step 3: SPIN HER UP
   1. In the root directory's terminal run the command: npm run react-dev
   2. In a seperate terminal run the command: npm start
   3. This should spin up the app to run on your localhost. Go to the browser and search the URL localhost:3012 and Let'sTalk should be waiting for you!
 
 ## Conclusion
-  This app is a work-in-progress so please be patient with its flaws. Every day we work towards the ideal and LetsTalk is too!
+  > This app is a work-in-progress so please be patient with its flaws. Every day we work towards the ideal and LetsTalk is too!

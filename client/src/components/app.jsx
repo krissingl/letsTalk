@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import axios from 'axios';
 import HomePage from './home.jsx';
@@ -16,6 +17,7 @@ class App extends React.Component {
       thoughts: '',
       prompts: '',
       pType: '',
+      // Create a "SignedIn" state (true or false) Reset PAGE to be sign-in
     };
     this.handleGoalChange = this.handleGoalChange.bind(this);
     this.handleCountChange = this.handleCountChange.bind(this);
@@ -42,7 +44,11 @@ class App extends React.Component {
   }
 
   handleGoalChange(event) {
-    this.setState({ goal: event.target.value });
+    let newGoal = event.target.value;
+    if (!newGoal) {
+      newGoal = 1;
+    }
+    this.setState({ goal: newGoal });
     this.checkGoal();
   }
 
@@ -74,7 +80,6 @@ class App extends React.Component {
   }
 
   resetState() {
-    this.setState({ goal: 100 });
     this.setState({ count: 0 });
   }
 
@@ -84,6 +89,7 @@ class App extends React.Component {
 
   render() {
     let page;
+    // If "signedIn" is true then home page, else signIn page
     if (this.state.page === 'home') {
       page = (
         <HomePage />
@@ -120,7 +126,7 @@ class App extends React.Component {
           <img src="https://lets-talk-environment.s3-us-west-1.amazonaws.com/logos/logo.png" alt="letsTalkLogo" className={classes.logo} />
           <div className={classes.navBar}>
             <button className={classes.menuBtn} onClick={() => { this.changePage('home'); }} type="button">Home</button>
-            <button className={classes.menuBtn} onClick={() => { this.changePage('hangout'); }} type="button">Hangout</button>
+            {/* <button className={classes.menuBtn}onClick={()=>{this.changePage('hangout');}}type="button">Hangout</button> */}
             <button className={classes.menuBtn} onClick={() => { this.changePage('thoughts'); }} type="button">See Thoughts</button>
             <button className={classes.menuBtn} onClick={() => { this.changePage('spillTea'); }} type="button">Let's Have Tea</button>
           </div>

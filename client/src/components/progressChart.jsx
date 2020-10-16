@@ -14,11 +14,10 @@ const ProgressChart = ({ wordCount, goal }) => {
       styles={buildStyles({
         rotation: 0.25,
         strokeLinecap: 'butt',
-        textSize: '16px',
+        textSize: '14px',
         pathColor: 'olivedrab',
-        textColor: '#f88',
+        textColor: 'darkolivegreen',
         trailColor: '#d6d6d6',
-        backgroundColor: 'red',
       })}
     />
   );

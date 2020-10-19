@@ -5,6 +5,12 @@ const HomePage = () => (
   <div className={classes.homeTitle}>
     <h4>WELCOME TO</h4>
     <h1>LET'S TALK</h1>
+    <p className={classes.homeSummary}>
+      Would you like some practice speaking in social settings?
+      Small talk with friends, ordering food, interviewing for a job?
+      Talk to me and I'll hear you out!
+      Select the "Let's Have Tea" tab at the top to get started.
+    </p>
     <div><img className={classes.teacup} src="https://lets-talk-environment.s3-us-west-1.amazonaws.com/logos/teaCup.png" alt="teacup" /></div>
   </div>
 );

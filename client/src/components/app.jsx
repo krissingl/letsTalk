@@ -17,6 +17,7 @@ class App extends React.Component {
       thoughts: '',
       prompts: '',
       pType: '',
+      editing: false,
       // Create a "SignedIn" state (true or false) Reset PAGE to be sign-in
     };
     this.handleGoalChange = this.handleGoalChange.bind(this);
@@ -24,6 +25,7 @@ class App extends React.Component {
     this.handleThotChange = this.handleThotChange.bind(this);
     this.handlePTypeChange = this.handlePTypeChange.bind(this);
     this.handlePromptsChange = this.handlePromptsChange.bind(this);
+    this.toggleEditThot = this.toggleEditThot.bind(this);
     this.checkGoal = this.checkGoal.bind(this);
     this.resetState = this.resetState.bind(this);
     this.changePage = this.changePage.bind(this);
@@ -69,6 +71,10 @@ class App extends React.Component {
     this.setState({ pType });
   }
 
+  toggleEditThot() {
+    return this.state.editing ? this.setState({ editing: false }) : this.setState({ editing: true });
+  }
+
   checkGoal() {
     if (this.state.count >= this.state.goal) {
       alert('You\'ve reached your goal!');
@@ -112,7 +118,9 @@ class App extends React.Component {
           handleCountChange={this.handleCountChange}
           handlePTypeChange={this.handlePTypeChange}
           handleGoalChange={this.handleGoalChange}
+          toggleEditThot={this.toggleEditThot}
           resetState={this.resetState}
+          editing={this.state.editing}
           prompts={this.state.prompts}
           pType={this.state.pType}
           count={this.state.count}

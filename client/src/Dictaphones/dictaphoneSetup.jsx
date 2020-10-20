@@ -3,9 +3,15 @@ import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognitio
 import axios from 'axios';
 import classes from '../css/styles.css';
 
-const Dictaphone = ({ commands, onCountChange, resetState }) => {
+const Dictaphone = ({
+  commands,
+  onCountChange,
+  toggleEditThot,
+  resetState,
+  editing,
+}) => {
+  let { transcript } = useSpeechRecognition({ commands });
   const {
-    transcript,
     interimTranscript,
     finalTranscript,
     resetTranscript,
@@ -50,14 +56,38 @@ const Dictaphone = ({ commands, onCountChange, resetState }) => {
         <div className={classes.resetAndSaveBox}>
           <button type="button" className={classes.resetAndSaveBtn} onClick={() => { resetTranscript(); resetState(); }}>Reset</button>
           <button type="button" className={classes.resetAndSaveBtn} onClick={() => { saveThoughts(finalTranscript); }}>Save Thoughts</button>
-          <button type="button" className={classes.resetAndSaveBtn} onClick={() => { console.log('Edit fired'); }}>Edit</button>
+          <button type="button" className={classes.resetAndSaveBtn} onClick={toggleEditThot}>Edit</button>
         </div>
       </div>
       <div className={classes.wordsBox}>
-        <span className={classes.words}>{transcript}</span>
+        {editing ? (
+          <span className={classes.words}>{transcript}</span>
+        ) : (
+          <input
+            type="text"
+            defaultValue={transcript}
+            ref={(node) => {
+              transcript = node;
+            }}
+          />
+        )}
       </div>
     </div>
   );
 };
+
+/*
+            {this.state.editing ? (
+              <span className="birth-year">{birthYear}</span>
+            ) : (
+              <input
+                type="text"
+                defaultValue={birthYear}
+                ref={node => {
+                  this.newbirthYear = node;
+                }}
+              />
+            )}
+*/
 
 export default Dictaphone;

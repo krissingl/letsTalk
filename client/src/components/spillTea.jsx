@@ -9,7 +9,9 @@ const SpillTea = ({
   handleCountChange,
   handlePTypeChange,
   handleGoalChange,
+  toggleEditThot,
   resetState,
+  editing,
   prompts,
   pType,
   count,
@@ -39,7 +41,12 @@ const SpillTea = ({
         />
       </div>
       <div>
-        <DictaphoneWidget onCountChange={handleCountChange} resetState={resetState} />
+        <DictaphoneWidget
+          onCountChange={handleCountChange}
+          toggleEditThot={toggleEditThot}
+          resetState={resetState}
+          editing={editing}
+        />
       </div>
       <div className={classes.listenBtnsBox}>
         <button type="button" className={classes.listenBtns} onClick={listenContinuously}>Listen</button>

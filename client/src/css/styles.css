@@ -46,11 +46,15 @@ button {
   color: white;
 }
 .homeTitle {
-  position: relative;
   display: flex;
   flex-direction: column;
   text-align: center;
   padding-top: 20px;
+}
+.homeSummary {
+  text-align: center;
+  margin-left: 400px;
+  margin-right: 400px;
 }
 .optionBox {
   display: flex;

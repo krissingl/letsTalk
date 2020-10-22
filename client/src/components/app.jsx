@@ -140,8 +140,8 @@ class App extends React.Component {
           <img src="https://lets-talk-environment.s3-us-west-1.amazonaws.com/logos/logo.png" alt="letsTalkLogo" className={classes.logo} />
           <div className={classes.navBar}>
             <button className={classes.menuBtn} onClick={() => { this.changePage('home'); }} type="button">Home</button>
-            <button className={classes.menuBtn} onClick={() => { this.changePage('hangout'); }} type="button">Hangout</button>
-            <button className={classes.menuBtn} onClick={() => { this.changePage('thoughts'); }} type="button">See Thoughts</button>
+            {/* <button className={classes.menuBtn} onClick={() => { this.changePage('hangout'); }} type="button">Hangout</button> */}
+            {/* <button className={classes.menuBtn} onClick={() => { this.changePage('thoughts'); }} type="button">See Thoughts</button> */}
             <button className={classes.menuBtn} onClick={() => { this.changePage('spillTea'); }} type="button">Let's Have Tea</button>
           </div>
         </div>

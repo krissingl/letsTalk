@@ -8,6 +8,13 @@ button {
   outline: none;
   border: none;
 }
+.cleanUp {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
 .homePage {
   display: flex;
   flex-direction: row;

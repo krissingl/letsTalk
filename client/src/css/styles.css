@@ -74,6 +74,10 @@ button {
   height: 200px;
   position: relative;
 }
+.prompt {
+  padding-top: 5px;
+  background-color: white;
+}
 .promptBtn {
   background-color: olivedrab;
   color: white;

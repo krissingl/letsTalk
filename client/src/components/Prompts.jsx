@@ -35,7 +35,7 @@ const PromptBox = ({
         </select>
       </div>
       <button type="button" className={classes.promptBtn} onClick={() => { const thoughtPrompt = getThoughtPrompt(); handlePromptsChange(thoughtPrompt); }}>Prompt Please!</button>
-      <div>
+      <div className={classes.prompt}>
         {prompts}
       </div>
     </div>

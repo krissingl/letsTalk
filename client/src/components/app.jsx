@@ -26,7 +26,7 @@ class App extends React.Component {
     this.handlePTypeChange = this.handlePTypeChange.bind(this);
     this.handlePromptsChange = this.handlePromptsChange.bind(this);
     this.toggleEditThot = this.toggleEditThot.bind(this);
-    this.checkGoal = this.checkGoal.bind(this);
+    // this.checkGoal = this.checkGoal.bind(this);
     this.resetState = this.resetState.bind(this);
     this.changePage = this.changePage.bind(this);
   }
@@ -51,12 +51,12 @@ class App extends React.Component {
       newGoal = 1;
     }
     this.setState({ goal: newGoal });
-    this.checkGoal();
+    // this.checkGoal();
   }
 
   handleCountChange(newCount) {
     this.setState({ count: newCount });
-    this.checkGoal();
+    // this.checkGoal();
   }
 
   handleThotChange(thoughts) {
@@ -80,19 +80,18 @@ class App extends React.Component {
     console.log(this.state.editing);
   }
 
-  checkGoal() {
-    if (this.state.count >= this.state.goal) {
-      alert('You\'ve reached your goal!');
-      // function that generates prize
-      // eslint-disable-next-line react/no-access-state-in-setstate
-      const newGoal = this.state.goal * 100;
-      this.setState({ goal: newGoal });
-    }
-  }
+  // checkGoal() {
+  //   if (this.state.count >= this.state.goal) {
+  //     alert('You\'ve reached your goal!');
+  //     // function that generates prize
+  //     // eslint-disable-next-line react/no-access-state-in-setstate
+  //     const newGoal = this.state.goal * 100;
+  //     this.setState({ goal: newGoal });
+  //   }
+  // }
 
   resetState() {
     this.setState({ count: 0 });
-    this.setState({ goal: 100 });
   }
 
   changePage(pageName) {
@@ -137,7 +136,9 @@ class App extends React.Component {
     return (
       <div>
         <div className={classes.navBarBox}>
-          <img src="https://lets-talk-environment.s3-us-west-1.amazonaws.com/logos/logo.png" alt="letsTalkLogo" className={classes.logo} />
+          <div onClick={() => { this.changePage('home'); }} className={classes.imgDiv}>
+            <img src="https://lets-talk-environment.s3-us-west-1.amazonaws.com/logos/logo.png" alt="letsTalkLogo" className={classes.logo} />
+          </div>
           <div className={classes.navBar}>
             <button className={classes.menuBtn} onClick={() => { this.changePage('home'); }} type="button">Home</button>
             {/* <button className={classes.menuBtn} onClick={() => { this.changePage('hangout'); }} type="button">Hangout</button> */}

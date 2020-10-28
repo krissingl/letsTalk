@@ -6,7 +6,7 @@ const HomePage = () => (
     <h4>WELCOME TO</h4>
     <h1>LET'S TALK</h1>
     <p className={classes.homeSummary}>
-      Would you like some practice speaking in social settings?
+      Would you like some practice speaking for social settings?
       <br />
       Small talk with friends, ordering food, interviewing for a job?
       <br />

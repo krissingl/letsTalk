@@ -36,7 +36,11 @@ button {
   justify-content: left;
   width: 140px;
   height: 140px;
-  align-self: center;
+}
+.imgDiv {
+  padding: 0;
+  margin: 0;
+  position: static;
 }
 .navBar {
   display: flex;

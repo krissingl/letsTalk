@@ -34,13 +34,12 @@ button {
 }
 .logo {
   justify-content: left;
-  width: 140px;
-  height: 140px;
+  width: 100px;
+  height: 100px;
 }
 .imgDiv {
   padding: 0;
   margin: 0;
-  position: static;
 }
 .navBar {
   display: flex;

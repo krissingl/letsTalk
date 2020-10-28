@@ -8,7 +8,7 @@ const HomePage = () => (
     <p className={classes.homeSummary}>
       Would you like some practice speaking for social settings?
       <br />
-      Small talk with friends, ordering food, interviewing for a job?
+      Small talk with friends, telling stories, interviewing for a job?
       <br />
       Talk to me and I'll hear you out! Select the "Let's Have Tea" tab at the top to get started!
     </p>

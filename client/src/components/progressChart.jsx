@@ -1,6 +1,5 @@
 import React from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-// import classes from '../css/styles.css';
 
 const ProgressChart = ({ wordCount, goal }) => {
   const progress = wordCount / goal;

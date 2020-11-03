@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from '../css/styles.css';
 
-const HomePage = () => (
+const HomePage = ({ changePage }) => (
   <div className={classes.homeTitle}>
     <h4>WELCOME TO</h4>
     <h1>LET'S TALK</h1>
@@ -12,9 +12,11 @@ const HomePage = () => (
       <br />
       Talk to me and I'll hear you out!
       <br />
-      Select the "Let's Have Tea" tab at the top to get started!
+      Click the teacup to begin!
     </p>
-    <div><img className={classes.teacup} src="https://lets-talk-environment.s3-us-west-1.amazonaws.com/logos/teaCup.png" alt="teacup" /></div>
+    <div onClick={() => { changePage('spillTea'); }} className={classes.imgDiv}>
+      <img className={classes.teacup} src="https://lets-talk-environment.s3-us-west-1.amazonaws.com/logos/teaCup.png" alt="teacup" />
+    </div>
   </div>
 );
 

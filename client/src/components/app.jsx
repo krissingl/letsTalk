@@ -103,7 +103,7 @@ class App extends React.Component {
     // If "signedIn" is true then home page, else signIn page
     if (this.state.page === 'home') {
       page = (
-        <HomePage />
+        <HomePage changePage={this.changePage} />
       );
     } else if (this.state.page === 'hangout') {
       page = (

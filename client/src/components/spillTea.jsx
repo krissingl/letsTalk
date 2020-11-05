@@ -5,17 +5,13 @@ import ExtrasBox from './ExtrasBox.jsx';
 import classes from '../css/styles.css';
 
 const SpillTea = ({
-  handlePromptsChange,
-  handlePTypeChange,
-  handleGoalChange,
   toggleEditThot,
-  resetState,
   editing,
-  prompts,
-  pType,
-  goal,
 }) => {
   const [count, handleCountChange] = useState(0);
+  const resetState = () => {
+    handleCountChange(0);
+  };
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
     console.log('Your browser does not support speech recognition software! Try Chrome desktop, maybe?');
   }

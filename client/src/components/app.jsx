@@ -11,23 +11,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
-      goal: 100,
       page: 'home',
       thoughts: '',
-      prompts: '',
-      pType: '',
       editing: false,
       // Create a "SignedIn" state (true or false) Reset PAGE to be sign-in
     };
-    this.handleGoalChange = this.handleGoalChange.bind(this);
-    this.handleCountChange = this.handleCountChange.bind(this);
     this.handleThotChange = this.handleThotChange.bind(this);
-    this.handlePTypeChange = this.handlePTypeChange.bind(this);
-    this.handlePromptsChange = this.handlePromptsChange.bind(this);
     this.toggleEditThot = this.toggleEditThot.bind(this);
     // this.checkGoal = this.checkGoal.bind(this);
-    this.resetState = this.resetState.bind(this);
     this.changePage = this.changePage.bind(this);
   }
 
@@ -45,30 +36,8 @@ class App extends React.Component {
       });
   }
 
-  handleGoalChange(event) {
-    let newGoal = event.target.value;
-    if (!newGoal) {
-      newGoal = 1;
-    }
-    this.setState({ goal: newGoal });
-    // this.checkGoal();
-  }
-
-  handleCountChange(newCount) {
-    this.setState({ count: newCount });
-    // this.checkGoal();
-  }
-
   handleThotChange(thoughts) {
     this.setState({ thoughts });
-  }
-
-  handlePromptsChange(prompts) {
-    this.setState({ prompts });
-  }
-
-  handlePTypeChange(pType) {
-    this.setState({ pType });
   }
 
   toggleEditThot() {
@@ -89,10 +58,6 @@ class App extends React.Component {
   //     this.setState({ goal: newGoal });
   //   }
   // }
-
-  resetState() {
-    this.setState({ count: 0 });
-  }
 
   changePage(pageName) {
     this.setState({ page: pageName });
@@ -119,17 +84,8 @@ class App extends React.Component {
     } else if (this.state.page === 'spillTea') {
       page = (
         <SpillTea
-          handlePromptsChange={this.handlePromptsChange}
-          handleCountChange={this.handleCountChange}
-          handlePTypeChange={this.handlePTypeChange}
-          handleGoalChange={this.handleGoalChange}
           toggleEditThot={this.toggleEditThot}
-          resetState={this.resetState}
           editing={this.state.editing}
-          prompts={this.state.prompts}
-          pType={this.state.pType}
-          count={this.state.count}
-          goal={this.state.goal}
         />
       );
     }

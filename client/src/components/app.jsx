@@ -5,7 +5,7 @@ import HomePage from './home.jsx';
 import Hangout from './hangouts.jsx';
 import SeeThoughts from './seeThoughts.jsx';
 import SpillTea from './spillTea.jsx';
-import classes from '../css/styles.css';
+import NavBar from './navBar.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -91,17 +91,7 @@ class App extends React.Component {
     }
     return (
       <div>
-        <div className={classes.navBarBox}>
-          <div onClick={() => { this.changePage('home'); }} className={classes.imgDiv}>
-            <img src="https://lets-talk-environment.s3-us-west-1.amazonaws.com/logos/logo.png" alt="letsTalkLogo" className={classes.logo} />
-          </div>
-          <div className={classes.navBar}>
-            <button className={classes.menuBtn} onClick={() => { this.changePage('home'); }} type="button">Home</button>
-            <button className={classes.menuBtn} onClick={() => { this.changePage('hangout'); }} type="button">Hangout</button>
-            <button className={classes.menuBtn} onClick={() => { this.changePage('thoughts'); }} type="button">See Thoughts</button>
-            <button className={classes.menuBtn} onClick={() => { this.changePage('spillTea'); }} type="button">Let's Have Tea</button>
-          </div>
-        </div>
+        <NavBar changePage={this.changePage} />
         <div>
           {page}
         </div>

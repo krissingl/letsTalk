@@ -1,5 +1,5 @@
 /* eslint-disable no-var */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 // import axios from 'axios';
 import classes from '../css/styles.css';

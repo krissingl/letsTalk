@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SpeechRecognition from 'react-speech-recognition';
 import DictaphoneWidget from '../Dictaphones/dictaphone.jsx';
 import ExtrasBox from './ExtrasBox.jsx';
@@ -6,7 +6,6 @@ import classes from '../css/styles.css';
 
 const SpillTea = ({
   handlePromptsChange,
-  handleCountChange,
   handlePTypeChange,
   handleGoalChange,
   toggleEditThot,
@@ -14,9 +13,9 @@ const SpillTea = ({
   editing,
   prompts,
   pType,
-  count,
   goal,
 }) => {
+  const [count, handleCountChange] = useState(0);
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
     console.log('Your browser does not support speech recognition software! Try Chrome desktop, maybe?');
   }
@@ -31,11 +30,9 @@ const SpillTea = ({
       <h2 className={classes.titleBuffer}>Have Some Tea and Let's Talk</h2>
       <div>
         <ExtrasBox
-          prompts={prompts}
           wordCount={count}
           goal={goal}
           pType={pType}
-          handlePromptsChange={handlePromptsChange}
           handlePTypeChange={handlePTypeChange}
           handleGoalChange={handleGoalChange}
         />

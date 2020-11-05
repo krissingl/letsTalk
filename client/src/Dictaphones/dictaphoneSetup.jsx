@@ -1,7 +1,7 @@
 /* eslint-disable no-var */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
-// import axios from 'axios';
+import axios from 'axios';
 import classes from '../css/styles.css';
 
 const Dictaphone = ({
@@ -31,19 +31,19 @@ const Dictaphone = ({
     return null;
   }
 
-  // const saveThoughts = (thoughts) => {
-  //   console.log('Did saveThoughts fire? Did it shoot thot: ', thoughts);
-  //   let currentDate = new Date();
-  //   currentDate = JSON.stringify(currentDate);
-  //   axios({
-  //     method: 'post',
-  //     url: '/thoughts',
-  //     data: {
-  //       thought: thoughts,
-  //       timestamp: currentDate,
-  //     },
-  //   });
-  // };
+  const saveThoughts = (thoughts) => {
+    console.log('Did saveThoughts fire? Did it shoot thot: ', thoughts);
+    let currentDate = new Date();
+    currentDate = JSON.stringify(currentDate);
+    axios({
+      method: 'post',
+      url: '/thoughts',
+      data: {
+        thought: thoughts,
+        timestamp: currentDate,
+      },
+    });
+  };
 
   return (
     <div>

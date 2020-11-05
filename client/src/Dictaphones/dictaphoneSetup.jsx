@@ -55,7 +55,7 @@ const Dictaphone = ({
         </span>
         <div className={classes.resetAndSaveBox}>
           <button type="button" className={classes.resetAndSaveBtn} onClick={() => { resetTranscript(); resetState(); }}>Reset</button>
-          {/* <button type="button" className={classes.resetAndSaveBtn} onClick={() => { saveThoughts(finalTranscript); }}>Save Thoughts</button> */}
+          <button type="button" className={classes.resetAndSaveBtn} onClick={() => { saveThoughts(finalTranscript); }}>Save Thoughts</button>
           {/* <button type="button" className={classes.resetAndSaveBtn} onClick={toggleEditThot}>Edit</button> */}
         </div>
       </div>

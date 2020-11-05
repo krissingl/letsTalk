@@ -3,22 +3,11 @@ import ProgressChart from './progressChart.jsx';
 import PromptBox from './Prompts.jsx';
 import classes from '../css/styles.css';
 
-const ExtrasBox = ({
-  handlePromptsChange,
-  handlePTypeChange,
-  prompts,
-  pType,
-  wordCount,
-}) => {
+const ExtrasBox = ({ wordCount }) => {
   const [goal, handleGoalChange] = useState(100);
   return (
     <div className={classes.optionBox}>
-      <PromptBox
-        prompts={prompts}
-        pType={pType}
-        handlePromptsChange={handlePromptsChange}
-        handlePTypeChange={handlePTypeChange}
-      />
+      <PromptBox />
       <div className={classes.wordCountBox}>
         <div>
           <h5>You can set a word count goal here:</h5>

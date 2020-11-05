@@ -29,13 +29,7 @@ const SpillTea = ({
     <div>
       <h2 className={classes.titleBuffer}>Have Some Tea and Let's Talk</h2>
       <div>
-        <ExtrasBox
-          wordCount={count}
-          goal={goal}
-          pType={pType}
-          handlePTypeChange={handlePTypeChange}
-          handleGoalChange={handleGoalChange}
-        />
+        <ExtrasBox wordCount={count} />
       </div>
       <div>
         <DictaphoneWidget

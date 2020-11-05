@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import classes from '../css/styles.css';
 import thoughtPrompts from '../../dist/thoughtPrompts.json';
 
-const PromptBox = ({
-  pType,
-  handlePTypeChange,
-}) => {
+const PromptBox = () => {
   const [prompts, handlePromptsChange] = useState('');
+  const [pType, handlePTypeChange] = useState('');
   const promptTypesList = Object.keys(thoughtPrompts).map((promptType) => (
     <option key={promptType} value={promptType}>{thoughtPrompts[promptType].type}</option>
   ));

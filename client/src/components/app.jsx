@@ -13,11 +13,8 @@ class App extends React.Component {
     this.state = {
       page: 'home',
       thoughts: '',
-      editing: false,
-      // Create a "SignedIn" state (true or false) Reset PAGE to be sign-in
     };
     this.handleThotChange = this.handleThotChange.bind(this);
-    this.toggleEditThot = this.toggleEditThot.bind(this);
     // this.checkGoal = this.checkGoal.bind(this);
     this.changePage = this.changePage.bind(this);
   }
@@ -40,15 +37,6 @@ class App extends React.Component {
     this.setState({ thoughts });
   }
 
-  toggleEditThot() {
-    if (this.state.editing) {
-      this.setState({ editing: false });
-    } else {
-      this.setState({ editing: true });
-    }
-    console.log(this.state.editing);
-  }
-
   // checkGoal() {
   //   if (this.state.count >= this.state.goal) {
   //     alert('You\'ve reached your goal!');
@@ -65,7 +53,6 @@ class App extends React.Component {
 
   render() {
     let page;
-    // If "signedIn" is true then home page, else signIn page
     if (this.state.page === 'home') {
       page = (
         <HomePage changePage={this.changePage} />

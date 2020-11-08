@@ -4,13 +4,7 @@ import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognitio
 import axios from 'axios';
 import classes from '../css/styles.css';
 
-const Dictaphone = ({
-  commands,
-  onCountChange,
-  // toggleEditThot,
-  resetState,
-  // editing,
-}) => {
+const Dictaphone = ({ commands, onCountChange, resetState }) => {
   const {
     transcript,
     interimTranscript,
@@ -21,7 +15,7 @@ const Dictaphone = ({
   useEffect(() => {
     if (finalTranscript !== '') {
       console.log('Got final result:', finalTranscript);
-      let words = finalTranscript.split(' ');
+      const words = finalTranscript.split(' ');
       const currentWordCount = words.length;
       onCountChange(currentWordCount);
     }
@@ -56,7 +50,6 @@ const Dictaphone = ({
         <div className={classes.resetAndSaveBox}>
           <button type="button" className={classes.resetAndSaveBtn} onClick={() => { resetTranscript(); resetState(); }}>Reset</button>
           <button type="button" className={classes.resetAndSaveBtn} onClick={() => { saveThoughts(finalTranscript); }}>Save Thoughts</button>
-          {/* <button type="button" className={classes.resetAndSaveBtn} onClick={toggleEditThot}>Edit</button> */}
         </div>
       </div>
       <div className={classes.wordsBox}>

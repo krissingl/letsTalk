@@ -15,7 +15,6 @@ class App extends React.Component {
       thoughts: '',
     };
     this.handleThotChange = this.handleThotChange.bind(this);
-    // this.checkGoal = this.checkGoal.bind(this);
     this.changePage = this.changePage.bind(this);
   }
 
@@ -36,16 +35,6 @@ class App extends React.Component {
   handleThotChange(thoughts) {
     this.setState({ thoughts });
   }
-
-  // checkGoal() {
-  //   if (this.state.count >= this.state.goal) {
-  //     alert('You\'ve reached your goal!');
-  //     // function that generates prize
-  //     // eslint-disable-next-line react/no-access-state-in-setstate
-  //     const newGoal = this.state.goal * 100;
-  //     this.setState({ goal: newGoal });
-  //   }
-  // }
 
   changePage(pageName) {
     this.setState({ page: pageName });
